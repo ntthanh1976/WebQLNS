@@ -4,9 +4,9 @@
 <html>
 <head runat="server">
     <title></title>
-    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    </asp:ContentPlaceHolder>      
 </head>
 <body>
     <form id="form1" runat="server">
@@ -22,21 +22,31 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="qlPhongBan.aspx">Quản lý phòng ban</a>
-                </li>               
+                </li>              
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Quản lý tin tức
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="qlTheLoai.aspx">Thể loại</a>
+                        <a class="dropdown-item" href="qlTinTuc.aspx">Bản tin</a>                      
+                    </div>
+                </li>
             </ul>
         </nav>
-                
-        <div class="container" style="min-height:400px">
+
+        <div class="container" style="min-height: 400px">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
 
         <div class="bg-info text-center pt-3 pb-3">
-              Thiết kế bởi : Lê Văn A - MSSSV
+            Thiết kế bởi : Lê Văn A - MSSSV
         </div>
 
     </form>
+    <script src="Scripts/jquery-3.0.0.js"></script>
     <script src="Scripts/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
